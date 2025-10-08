@@ -68,30 +68,26 @@ def health_check():
     return status_detail
 
 
-# @app.get("/books/", response_model=list[Book])
-# def get_books():
-#     """Retrieve all books."""
-#     logger.info("Fetching all books.")
-#     return books_db
+
 
 
 
 
 # POST: CREATE operation
-# @app.post("/books/", response_model=Book, status_code=status.HTTP_201_CREATED)
-# def create_book(book_data: BookBase):
-#     """
-#     Creates a new book record.
-#     The input data is automatically validated against the BookBase model.
-#     """
-#     new_id = uuid.uuid4()
-#     # Convert Pydantic model to a dict, then add the generated ID
-#     new_book = book_data.model_dump()
-#     new_book["id"] = str(new_id)
+@app.post("/books/", response_model=Book, status_code=status.HTTP_201_CREATED)
+def create_book(book_data: BookBase):
+    """
+    Creates a new book record.
+    The input data is automatically validated against the BookBase model.
+    """
+    new_id = uuid.uuid4()
+    # Convert Pydantic model to a dict, then add the generated ID
+    new_book = book_data.model_dump()
+    new_book["id"] = str(new_id)
 
-#     books_db.append(new_book)
-#     _save_data()
+    books_db.append(new_book)
+    _save_data()
 
-#     logger.info(f"Book created with ID: {new_book['id']}")
-#     # Return the created book using the full Book response model
-#     return new_book
+    logger.info(f"Book created with ID: {new_book['id']}")
+    # Return the created book using the full Book response model
+    return new_book
