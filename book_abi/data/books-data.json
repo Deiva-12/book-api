@@ -1,20 +1,29 @@
 [
   {
-    "id": "e22137d5-2e0f-48e0-a430-6644d6e98b0f",
-    "title": "The Hitchhiker's Guide to the Galaxy",
-    "year": 1979,
-    "author": {
-      "name": "Douglas Adams",
-      "country": "UK"
-    }
-  },
-  {
-    "id": "a9b8c7d6-1f0e-47b1-b541-7755c6f89a1b",
-    "title": "1984",
-    "year": 1949,
+    "title": "Animal farm",
+    "year": 1981,
     "author": {
       "name": "George Orwell",
-      "country": "UK"
-    }
+      "country": "Britain"
+    },
+    "id": "518c0d85-86c2-4fbd-a5ec-0f49d2d762ae"
+  },
+  {
+    "title": "Animal farm",
+    "year": 1981,
+    "author": {
+      "name": "George Orwell",
+      "country": "Britain"
+    },
+    "id": "34051729-0d3d-4b11-bc0b-85485f5b5ae3"
+  },
+  {
+    "title": "Animal farm",
+    "year": 1982,
+    "author": {
+      "name": "George Orwell",
+      "country": "Britain"
+    },
+    "id": "c2d66aa6-c3ae-44f6-98bd-f39ab440ac3b"
   }
 ]
